@@ -7,7 +7,7 @@
     <UseWPF>true</UseWPF>
     <PackageId>UtilidadesCG</PackageId>
     <Title>Utilidades</Title>
-    <Version>1.0.2.1</Version>
+    <Version>1.0.3</Version>
     <Authors>CryGeo</Authors>
     <Product>Utilidades</Product>
     <Description>Contiene varios UserControl para usar, PickTime, SelectElement, y otros que se irán agradando</Description>
