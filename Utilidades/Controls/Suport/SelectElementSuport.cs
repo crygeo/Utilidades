@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Controls.Suport
+namespace Utilidades.Suport
 {
     public class SelectElementSuport : INotifyPropertyChanged
     {

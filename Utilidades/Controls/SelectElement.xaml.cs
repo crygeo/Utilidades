@@ -1,4 +1,4 @@
-﻿using Controls.Suport;
+﻿using Utilidades.Suport;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 
 
-namespace Controls
+namespace Utilidades
 {
 
     public partial class SelectElement : UserControl

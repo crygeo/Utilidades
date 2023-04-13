@@ -1,20 +1,14 @@
-﻿<UserControl x:Class="Controls.PickTime"
+﻿<UserControl x:Class="Utilidades.PickTime"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:view="clr-namespace:Controls"
+             xmlns:view="clr-namespace:Utilidades"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              Name="pickTime"
              >
-
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
         <Button Name="button" Grid.RowSpan="1" Style="{DynamicResource styleButon}" Click="OpenPopup_Click"/>
         <Popup x:Name="Popup_Picker" AllowsTransparency="True" Placement="Center" HorizontalAlignment="Center" IsOpen="False" VerticalAlignment="Center">
             <Grid MaxHeight="240" MinWidth="150" Grid.RowSpan="3">

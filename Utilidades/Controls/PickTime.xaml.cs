@@ -1,5 +1,5 @@
-﻿using Controls.Suport;
-using CryGeo.Style;
+﻿using Utilidades.Suport;
+using Utilidades.Style;
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
 
-namespace Controls
+namespace Utilidades
 {
     public partial class PickTime : UserControl
     {

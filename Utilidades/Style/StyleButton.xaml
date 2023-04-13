@@ -1,5 +1,5 @@
 ﻿<ResourceDictionary 
-    x:Class="CryGeo.Style.StyleButton"
+    x:Class="Utilidades.Style.StyleButton"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 

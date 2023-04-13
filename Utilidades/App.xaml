@@ -1,18 +1,11 @@
 ﻿<Application x:Class="Utilidades.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Controls/PickTime.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <!--<DataTemplate DataType="{x:Type viewmodel:SelectElementViewModel}">
-                <view:SelectElement/>
-            </DataTemplate>
-
-            <DataTemplate DataType="{x:Type viewmodel:PickTimeViewModel}">
-                <view:PickTime/>
-            </DataTemplate>-->
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Style/StyleButton.xaml"/>
+                <ResourceDictionary Source="/Style/StyleButton.xaml" x:Name="StyleButtonResourceDictionary" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Controls.Suport
+namespace Utilidades.Suport
 {
     public class PickTimeSuport : INotifyPropertyChanged
     {

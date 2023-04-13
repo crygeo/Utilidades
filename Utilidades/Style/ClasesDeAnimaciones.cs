@@ -5,9 +5,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Drawing;
 
-namespace CryGeo.Style
+namespace Utilidades.Style
 {
-    public class ClasesDeAnimaciones
+    internal class ClasesDeAnimaciones
     {
         public static ObjectAnimationUsingKeyFrames animateGiro(double To, double From, double Speed, double SaltoFotrograma = 1)
         {
