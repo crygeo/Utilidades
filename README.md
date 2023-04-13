@@ -13,3 +13,29 @@ Uso: El uso que yo le doy es selecionar un tiempo en que un mensaje se va a envi
 
 ### SelectElement
 Con este componente podras mostrar una lista lo cual el usuario podra escojer cual desea. Tiene varios parametros visuales, que te gustaran mucho.
+
+
+## Nota:
+
+En el archivo App.xaml, agrega el resouse dictionary.
+
+```
+<ResourceDictionary Source="pack://application:,,,/Utilidades;component/Style/StyleButton.xaml"/>
+```
+
+Ejemplo:
+
+```
+<Application x:Class="NombreDelProyecto.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                  <ResourceDictionary Source="pack://application:,,,/Utilidades;component/Style/StyleButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+```
