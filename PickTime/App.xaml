@@ -1,0 +1,20 @@
+﻿<Application x:Class="PickTime.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PickTime"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--<DataTemplate DataType="{x:Type viewmodel:SelectElementViewModel}">
+                <view:SelectElement/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:PickTimeViewModel}">
+                <view:PickTime/>
+            </DataTemplate>-->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style/StyleButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

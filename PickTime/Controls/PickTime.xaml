@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Controls.PickTime"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:view="clr-namespace:Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Name="pickTime"
+             >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Name="button" Grid.RowSpan="1" Style="{DynamicResource styleButon}" Click="OpenPopup_Click"/>
+        <Popup x:Name="Popup_Picker" AllowsTransparency="True" Placement="Center" HorizontalAlignment="Center" IsOpen="False" VerticalAlignment="Center">
+            <Grid MaxHeight="240" MinWidth="150" Grid.RowSpan="3">
+
+                <Border CornerRadius="5" Background="#000" Grid.RowSpan="2">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="40"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Orientation="Horizontal">
+                            <view:SelectElement DataContext="{Binding ElementName=pickTime, Path=PickTimeSp.ListaD}" Lista="{Binding Path=Lista}" NameLista="{Binding Path=NameLista}" Visibility="{Binding Path=Visible}" SelectIndex="{Binding Path=IndexSelect}" Width="50" MaxItem="7" PositionSelect="4"/>
+                            <view:SelectElement DataContext="{Binding ElementName=pickTime, Path=PickTimeSp.ListaH}" Lista="{Binding Path=Lista}" NameLista="{Binding Path=NameLista}" Visibility="{Binding Path=Visible}" SelectIndex="{Binding Path=IndexSelect}" Width="50" MaxItem="7" PositionSelect="4"/>
+                            <view:SelectElement DataContext="{Binding ElementName=pickTime, Path=PickTimeSp.ListaM}" Lista="{Binding Path=Lista}" NameLista="{Binding Path=NameLista}" Visibility="{Binding Path=Visible}" SelectIndex="{Binding Path=IndexSelect}" Width="50" MaxItem="7" PositionSelect="4"/>
+                            <view:SelectElement DataContext="{Binding ElementName=pickTime, Path=PickTimeSp.ListaS}" Lista="{Binding Path=Lista}" NameLista="{Binding Path=NameLista}" Visibility="{Binding Path=Visible}" SelectIndex="{Binding Path=IndexSelect}" Width="50" MaxItem="7" PositionSelect="4"/>
+
+                        </StackPanel>
+                        <Grid Grid.Row="1" Height="30" VerticalAlignment="Top">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="2" Click="ButtonClosePop" Style="{DynamicResource styleButonX}"/>
+                            <Button Grid.Column="1" Click="ButtonListoPop" Style="{DynamicResource styleButonL}"/>
+                            <Button Grid.Column="0" Click="ButtonNowPop" Style="{DynamicResource styleButonR}"/>
+
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Popup>
+    </Grid>
+</UserControl>

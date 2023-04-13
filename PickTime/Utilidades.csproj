@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <PackageId>crygeo</PackageId>
+    <Title>Utilidades</Title>
+    <Version>1.0.0</Version>
+    <Authors>CryGeo</Authors>
+    <Product>Utilidades</Product>
+    <Description>Contiene varias userControl para usar, PickTime, SelectElement, y otros que se iran agradando.</Description>
+  </PropertyGroup>
+
+</Project>
