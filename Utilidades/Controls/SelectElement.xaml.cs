@@ -5,7 +5,7 @@ using System.Collections.Specialized;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-
+using System.Windows.Media;
 
 namespace Utilidades
 {
@@ -44,7 +44,6 @@ namespace Utilidades
                                                                                                     new FrameworkPropertyMetadata(0,
                                                                                                                                   FrameworkPropertyMetadataOptions.BindsTwoWayByDefault,
                                                                                                                                   SelectIndexPropertyChanged));
-
         #endregion
 
 
@@ -80,6 +79,7 @@ namespace Utilidades
             get => (int)GetValue(SelectIndexProperty);
             set { SetValue(SelectIndexProperty, value); SelectElementSp.SelectIndex = value; }
         }
+
         #endregion
 
         public SelectElementSuport SelectElementSp { get; set; }
@@ -96,7 +96,6 @@ namespace Utilidades
 
         private void Grid_MouseWheel(object sender, MouseWheelEventArgs e)
         {
-            Console.WriteLine("Entre al evento");
 
             if (e.Delta > 0)
             {

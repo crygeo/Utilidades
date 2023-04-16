@@ -7,7 +7,7 @@
     <UseWPF>true</UseWPF>
     <PackageId>UtilidadesCG</PackageId>
     <Title>Utilidades</Title>
-    <Version>1.0.3</Version>
+    <Version>1.0.5</Version>
     <Authors>CryGeo</Authors>
     <Product>Utilidades</Product>
     <Description>Contiene varios UserControl para usar, PickTime, SelectElement, y otros que se irán agradando</Description>
@@ -20,18 +20,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="D:\Users\Geovanny\Descargas\h.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="D:\Users\Geovanny\Escritorio\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <None Update="h.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

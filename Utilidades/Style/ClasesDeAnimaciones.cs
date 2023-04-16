@@ -4,6 +4,7 @@ using System.Windows.Media;
 using System.Windows;
 using System.Windows.Controls;
 using System.Drawing;
+using System.Windows.Shapes;
 
 namespace Utilidades.Style
 {
@@ -134,12 +135,34 @@ namespace Utilidades.Style
 
             return sb;
         }
+        public static Storyboard sbPathAnimetedSize(double fromX, double toX, double fromY, double toY, double duration, Path path, Storyboard sb)
+        {
+            var duracion = new Duration(TimeSpan.FromMilliseconds(duration));
+
+            var animButtonWidth = new DoubleAnimation(fromX, toX, duracion);
+            var animButtonHeight = new DoubleAnimation(fromY, toY, duracion);
+
+            sb.Children.Add(animButtonWidth);
+            Storyboard.SetTarget(animButtonWidth, path);
+            Storyboard.SetTargetProperty(animButtonWidth, new PropertyPath("Width"));
+
+            sb.Children.Add(animButtonHeight);
+            Storyboard.SetTarget(animButtonHeight, path);
+            Storyboard.SetTargetProperty(animButtonHeight, new PropertyPath("Height"));
+
+            return sb;
+        }
 
         public static Storyboard sbButtonBackground(System.Windows.Media.Color fromColor, System.Windows.Media.Color toColor, double duration, Button button, Storyboard sb)
         {
             var duracion = new Duration(TimeSpan.FromMilliseconds(duration));
 
-            ColorAnimation animaColor = new ColorAnimation(fromColor, toColor, duracion);
+            ColorAnimation animaColor = new ColorAnimation
+            {
+                From = fromColor,
+                To = toColor,
+                Duration = duracion
+            };
 
             sb.Children.Add(animaColor);
             Storyboard.SetTarget(animaColor, button);

@@ -135,7 +135,6 @@ namespace Utilidades.Suport
         }
 
 
-
         private void ListaD_IndexSelectChanged(object? sender, EventArgs e)
         {
             if (sender is PickTimeModelD)
@@ -192,6 +191,8 @@ namespace Utilidades.Suport
             TimeChanged?.Invoke(Time, EventArgs.Empty);
         }
 
+
+
     }
     public class PickTimeModelD : INotifyPropertyChanged
     {
@@ -228,6 +229,7 @@ namespace Utilidades.Suport
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        
         private void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             if (PropertyChanged != null)

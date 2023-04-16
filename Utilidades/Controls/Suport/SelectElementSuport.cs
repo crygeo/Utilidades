@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace Utilidades.Suport
@@ -68,9 +69,11 @@ namespace Utilidades.Suport
             {
                 if (value == selectIndex) return;
                 if (value >= lista.Count) return;
-                if (value <=0) return;
+                if (value < 0) return;
+
                 selectIndex = value;
-                MoverElementos(value);
+
+                MoverElementos();
                 Update();
                 OnPropertyChanged(nameof(SelectIndex));
             }
@@ -137,7 +140,11 @@ namespace Utilidades.Suport
                 if (maxItem < i) { item.Position = i; }
 
                 listaDesorganizada.Add(item);
-                listaDesorganizadaOriginal.Add(item);
+            }
+
+            if(listaDesorganizadaOriginal == null || listaDesorganizadaOriginal.Count == 0)
+            {
+                listaDesorganizadaOriginal = new List<ModelItemSelect>(ListaDesorganizada.ToList());
             }
 
             cantNegative = positionSelect - 1;
@@ -145,9 +152,12 @@ namespace Utilidades.Suport
         }
 
 
-        private void MoverElementos(int index)
+        private void MoverElementos()
         {
-            if(index == 0) { listaDesorganizada = listaDesorganizadaOriginal; return; }
+            var index = selectIndex;
+
+            if(index == 0) { listaDesorganizada = new List<ModelItemSelect>(listaDesorganizadaOriginal.ToList()); return; }
+
             var temp = listaDesorganizadaOriginal;
             var secction1 = temp.GetRange(0, index);
             var secction2 = temp.GetRange(index , temp.Count - index);
@@ -182,6 +192,8 @@ namespace Utilidades.Suport
             var temp = listaDesorganizada[0];
             listaDesorganizada.RemoveAt(0);
             listaDesorganizada.Add(temp);
+
+
         }
 
         /// <summary>
@@ -209,10 +221,6 @@ namespace Utilidades.Suport
                 temp = listaDesorganizada[index];
 
                 temp.Position = index;
-                //if(index == 0) 
-                //{
-                //    SelectIndex = temp.Index; 
-                //}
 
                 listaView.Add(temp);
 
