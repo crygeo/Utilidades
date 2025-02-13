@@ -9,5 +9,6 @@
     <StackPanel Background="#29363F">
         <local1:TextBoxPlus Style="{DynamicResource TextBoxPlusStyle1}" Placeholder="Usuario"/>
         <local1:TextBoxPlus Style="{DynamicResource TextBoxPlusStyle1}" Placeholder="Contraseña"/>
+        <local1:TextBoxPlus  Placeholder="Contraseña"/>
     </StackPanel>
 </Window>

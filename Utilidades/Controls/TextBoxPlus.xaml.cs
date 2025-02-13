@@ -25,13 +25,13 @@ namespace Utilidades.Controls
         public static readonly DependencyProperty TextHorizontalAlignmentProperty = DependencyProperty.Register(nameof(TextHorizontalAlignment), typeof(HorizontalAlignment), typeof(TextBoxPlus), new PropertyMetadata(HorizontalAlignment.Left));
 
         public static readonly DependencyProperty PlaceholderProperty = DependencyProperty.Register(nameof(Placeholder), typeof(string), typeof(TextBoxPlus), new PropertyMetadata(string.Empty));
-        public static readonly DependencyProperty PlaceholderForegroundProperty = DependencyProperty.Register(nameof(PlaceholderForeground), typeof(SolidColorBrush), typeof(TextBoxPlus), new PropertyMetadata(Brushes.Gray));
+        public static readonly DependencyProperty PlaceholderForegroundProperty = DependencyProperty.Register(nameof(PlaceholderForeground), typeof(SolidColorBrush), typeof(TextBoxPlus), new PropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty PlaceholderFontSizeProperty = DependencyProperty.Register(nameof(PlaceholderFontSize), typeof(int), typeof(TextBoxPlus), new PropertyMetadata(12));
         public static readonly DependencyProperty PlaceholderVerticalAlignmentProperty = DependencyProperty.Register(nameof(PlaceholderVerticalAlignment), typeof(VerticalAlignment), typeof(TextBoxPlus), new PropertyMetadata(VerticalAlignment.Center));
         public static readonly DependencyProperty PlaceholderHorizontalAlignmentProperty = DependencyProperty.Register(nameof(PlaceholderHorizontalAlignment), typeof(HorizontalAlignment), typeof(TextBoxPlus), new PropertyMetadata(HorizontalAlignment.Left));
 
 
-        public static readonly DependencyProperty CaretBrushProperty = DependencyProperty.Register(nameof(CaretBrush), typeof(SolidColorBrush), typeof(TextBoxPlus), new PropertyMetadata(Brushes.White));
+        public static readonly DependencyProperty CaretBrushProperty = DependencyProperty.Register(nameof(CaretBrush), typeof(SolidColorBrush), typeof(TextBoxPlus), new PropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty IsFocusedBoxProperty = DependencyProperty.Register(nameof(IsFocusedBox), typeof(bool), typeof(TextBoxPlus), new PropertyMetadata(false));
 
 
