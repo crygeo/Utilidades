@@ -135,6 +135,25 @@ namespace Utilidades.Style
 
             return sb;
         }
+        public static Storyboard sbPathAnimetedMargin(Thickness fromMargin, Thickness toMargin, double duration, Path path, Storyboard sb)
+        {
+            var animMargin = new ThicknessAnimation
+            {
+                From = fromMargin,
+                To = toMargin,
+                Duration = TimeSpan.FromMilliseconds(duration),
+                EasingFunction = new QuadraticEase()
+            };
+
+            var element = (FrameworkElement)path;
+
+            Storyboard.SetTarget(animMargin, element);
+            Storyboard.SetTargetProperty(animMargin, new PropertyPath(FrameworkElement.MarginProperty));
+
+            sb.Children.Add(animMargin);
+
+            return sb;
+        }
         public static Storyboard sbPathAnimetedSize(double fromX, double toX, double fromY, double toY, double duration, Path path, Storyboard sb)
         {
             var duracion = new Duration(TimeSpan.FromMilliseconds(duration));

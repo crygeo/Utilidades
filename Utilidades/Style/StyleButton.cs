@@ -17,7 +17,7 @@ namespace Utilidades.Style
         private Storyboard sbAnimacionEntrada;
         private Storyboard sbAnimacionSalida;
 
-        private double speed;
+        private readonly double speed;
         private double sizeStart;
         private double sizeFinal;
         private Color buttonSalidaColor1;
@@ -28,23 +28,25 @@ namespace Utilidades.Style
             sbAnimacionEntrada = new Storyboard();
             sbAnimacionSalida = new Storyboard();
 
+            sizeFinal = 3;
+            sizeStart = 10;
             speed = 150;
-            sizeStart = 40;
-            sizeFinal = 50;
         }
 
         private bool buttonEntradaBandera = true;
         private void buttonEntrada(object sender, MouseEventArgs e)
         {
-            Button button = (Button)sender;
-            var pt = (Path)button.Template.FindName("myPath", button);
-            
+
+
             if (buttonEntradaBandera)
             {
+                Button button = (Button)sender;
+                var pt = (Path)button.Template.FindName("myPath", button);
+
                 buttonSalidaColor1 = ((SolidColorBrush)((Brush)button.Background)).Color;
                 buttonSalidaColor2 = ((SolidColorBrush)((Brush)button.Foreground)).Color;
 
-                sbAnimacionEntrada = ClasesDeAnimaciones.sbPathAnimetedSize(sizeStart, sizeFinal, sizeStart, sizeFinal, speed, pt, sbAnimacionEntrada);
+                sbAnimacionEntrada = ClasesDeAnimaciones.sbPathAnimetedMargin(new Thickness(sizeStart), new Thickness(sizeFinal), speed, pt, sbAnimacionEntrada);
 
                 sbAnimacionEntrada = ClasesDeAnimaciones.sbButtonBackground(
                     buttonSalidaColor1,
@@ -62,13 +64,14 @@ namespace Utilidades.Style
         private bool buttonSalidaBandera = true;
         private void buttonSalida(object sender, MouseEventArgs e)
         {
-            Button button = (Button)sender;
-            var pt = (Path)button.Template.FindName("myPath", button);
 
             if (buttonSalidaBandera)
             {
+                Button button = (Button)sender;
+                var pt = (Path)button.Template.FindName("myPath", button);
 
-                sbAnimacionSalida = ClasesDeAnimaciones.sbPathAnimetedSize(sizeFinal, sizeStart, sizeFinal, sizeStart, speed, pt, sbAnimacionSalida);
+                sbAnimacionSalida = ClasesDeAnimaciones.sbPathAnimetedMargin(new Thickness(sizeFinal), new Thickness(sizeStart), speed, pt, sbAnimacionSalida);
+
                 sbAnimacionSalida = ClasesDeAnimaciones.sbButtonBackground(buttonSalidaColor2,
                                                                            buttonSalidaColor1,
                                                                            speed,

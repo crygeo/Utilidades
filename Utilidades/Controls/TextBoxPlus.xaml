@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Utilidades.Controls.TextBoxPlus"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Utilidades.Controls"
+             mc:Ignorable="d"
+             d:DesignHeight="{Binding}" d:DesignWidth="800" Background="{x:Null}"
+             d:DataContext="{d:DesignInstance Type=local:TextBoxPlus}"
+             Focusable="True"
+             >
+    <Grid >
+        <!-- TextBox -->
+        <TextBox Name="MainTextBox"
+                 Text="{Binding Text, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay}"
+                 Foreground="{Binding Foreground}"
+                 BorderBrush="Transparent" BorderThickness="0" Background="Transparent"
+                 Focusable="True"
+                 FontSize="{Binding FontSize}"
+                 VerticalAlignment="{Binding TextVerticalAlignment}" HorizontalAlignment="{Binding TextHorizontalAlignment}" CaretBrush="{Binding CaretBrush}">
+        </TextBox>
+
+        <!-- Placeholder -->
+        <TextBlock Name="PlaceholderText"
+                   Foreground="{Binding PlaceholderForeground}" Background="{x:Null}"
+                   Text="{Binding Placeholder}"
+                   FontSize="{Binding PlaceholderFontSize}"
+                   Padding="2,0,10,0"
+                   IsHitTestVisible="False"
+                   Visibility="Collapsed" VerticalAlignment="{Binding PlaceholderVerticalAlignment}" HorizontalAlignment="{Binding PlaceholderHorizontalAlignment}"/>
+    </Grid>
+</UserControl>

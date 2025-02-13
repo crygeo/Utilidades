@@ -3,10 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Utilidades"
+        xmlns:local="clr-namespace:Utilidades" xmlns:local1="clr-namespace:Utilidades.Controls"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
-    <Grid>
-        <local:PickTime Width="50" Height="50"/>
-    </Grid>
+    <StackPanel Background="#29363F">
+        <local1:TextBoxPlus Style="{DynamicResource TextBoxPlusStyle1}" Placeholder="Usuario"/>
+        <local1:TextBoxPlus Style="{DynamicResource TextBoxPlusStyle1}" Placeholder="Contraseña"/>
+    </StackPanel>
 </Window>
